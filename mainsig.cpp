@@ -3,16 +3,17 @@
 
 #define TEST1 5
 #define TEST2 4
+#define MAX_SIZE 12
 
-#include "digit_sig.h"
+#include "DigitSig.h"
 
 void manual_test()
 {
-	digit_sig test1, test2;
+	DigitSig test1, test2;
 		
 	int a_test3[] = { 0, 1, 2, 3, 4 };
 	int a_test4[] = { 5, 1, 2, 3, 4 };
-	digit_sig test3 (a_test3, 5), test4(a_test4, 5);
+	DigitSig test3 (a_test3, 5), test4(a_test4, 5);
 	
 	assert(!test1.get_size_array());
 
@@ -23,13 +24,13 @@ void manual_test()
 
 	test1.concat(test2);
 	test1.print();
-	assert(test1.get_size_array() == (TEST1 + TEST2) || (MAX_SIZE));
+	assert(test1.get_size_array() == (TEST1 + TEST2));
 		//проверяем выход за пределы максимального размера массива
 
-	test1.concat(test2);
-		//сейчас по моим подсчетам должен превысить
-	assert(test1.get_size_array() == (TEST1 + TEST2) || (MAX_SIZE)); 
 	test1.print();
+
+	test3.print();
+	test4.print();
 
 	assert(test1(MAX_SIZE*RAND_MAX+1) < 0); //время превышает длину сигнала
 	assert(test1(-3) < 0);
@@ -38,6 +39,7 @@ void manual_test()
 }
 
 int main () {
+	srand(5);
 	manual_test();
 	return 0;
 }

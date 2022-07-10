@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\digit_sig.cpp">
+    <ClCompile Include="..\DigitSig.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\mainsig.cpp">
@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\digit_sig.h">
+    <ClInclude Include="..\DigitSig.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
