@@ -3,11 +3,6 @@
 #include <iostream>
 #include "DigitSig.h"
 
-DigitSig::DigitSig (const int* mass, int size) {
-	for (int i = 0; i < size; i++)
-		arr.push_back(mass[i]);
-}
-
 int DigitSig::operator ()(unsigned int time) const{
 	if (time < 0) return -1;
 	if (time == 0)

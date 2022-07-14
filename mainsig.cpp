@@ -11,9 +11,9 @@ void manual_test()
 {
 	DigitSig test1, test2;
 		
-	int a_test3[] = { 0, 1, 2, 3, 4 };
-	int a_test4[] = { 5, 1, 2, 3, 4 };
-	DigitSig test3 (a_test3, 5), test4(a_test4, 5);
+	vector <unsigned int> a_test3 = { 0, 1, 2, 3, 4 };
+	vector <unsigned int> a_test4 = { 5, 1, 2, 3, 4 };
+	DigitSig test3(a_test3), test4(a_test4);
 	
 	assert(!test1.get_size_array());
 

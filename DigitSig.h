@@ -13,7 +13,7 @@ class DigitSig {
 public:
 	DigitSig () {}
 	DigitSig (int name) : id(name) {}
-	DigitSig (const int*, int);
+	DigitSig(const vector <unsigned int> mass) { arr = mass; };
 
 	void input_r (int x); //наполнение массива рандомными числами с присвоением размера х
 	void print() const;
